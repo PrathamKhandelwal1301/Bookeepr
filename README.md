@@ -14,3 +14,5 @@ Before running the project in your PC make sure to configure the database name a
 API used: Open Library Covers Api,
 
 Make sure to enter the ISBN entered does have a cover in Open Library Covers API, If it doenot have the cover the cover will not load in the website, Feel free to change the api if you fell like it API call is in the image tag instead of the index.js file.
+
+queries.sql constins all the queries that you would have to run to construct the tables in the database properly
