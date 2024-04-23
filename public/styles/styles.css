@@ -1,0 +1,209 @@
+.add{
+    font-family: "Oswald", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 3.5vw;
+    top: 25vh;
+    border-radius: 50%;
+    height: 4vh;
+    width: 4vh;
+    text-decoration: none;
+    background-color: #E4C59E;
+    color: #322C2B;
+    font-size: 5vh;
+    font-weight: 400;
+}
+
+body{
+    font-family: "Oswald", sans-serif;
+    background-color: #322C2B;
+}
+
+.book{
+    margin: 0;
+    color: #E4C59E;
+}
+
+.books{
+    transform : translateY(60px);
+    opacity: 0;
+    transition: all 0.5s ease-in;
+}
+
+.books.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.butcont {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 10vh;
+}
+
+.button{
+    background-color: #E4C59E;
+    color: #322C2B;
+    border-radius: 2vh;
+    font-size: 3vh;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    padding: 0.5vh 4vh 0.5vh 4vh;
+    margin-right: 1.5vw;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container {
+    width: 90vw;
+    margin: auto;
+}
+
+.date{
+    opacity: 50%;
+
+}
+
+.dscp{
+    font-size: 2.5vh;
+    width: 70vw;
+}
+
+.h1{
+    font-size: 10vh;
+    flex-basis: 100%;
+}
+
+.h3{
+    font-size: 5vh;
+}
+
+.h4{
+    font-size: 2vh;
+}
+
+hr{
+    margin-top: 4vh;
+    width: 95vw;
+    border-color: #E4C59E;
+    border-width: 0.25vh;
+}
+
+.heading{
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    color: #E4C59E;
+    margin: 0;
+}
+
+.heading-container{
+    display: grid;
+    width: 50vw;
+    margin-left: 2vw;
+}
+
+input{
+    font-family: "Oswald", sans-serif;
+    background-color: #322C2B;
+    border-width: 0 0 thin 0;
+    border-color: #E4C59E;
+    height: 3vh;
+    width: 40vw;
+    font-size: 2vh;
+    outline: none;
+    color: white;
+    margin-top: 1vh;
+}
+
+img{
+    float: left;
+    width: 15vh;
+    height: 22.5vh;
+    margin: 2vw;
+    margin-right: 1vw;
+    margin-top: 1vw;
+}
+
+label{
+    display: flex;
+    font-size: 3vh;
+    align-items: center;
+    color: #E4C59E;
+    margin-top: 3vh;
+}
+
+.ligther{
+    font-weight: lighter;
+}
+
+.link{
+    font-weight: 500;
+    color: #AF8260;
+}
+
+.long-field{
+    height: 20vh;
+    width: 40vw;
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+}
+
+.note{
+    font-size: 2.5vh;
+    width: 30vw;
+}
+
+.notes {
+    margin-top: 2vh;
+}
+
+.notes-hr{
+    width: 90vw;
+}
+
+.notes-img{
+    width : 20vh;
+    height : 30vh;
+}
+
+.submit{
+    background-color: #E4C59E;
+    color: #322C2B;
+    border-radius: 5vh;
+    font-size: 3vh;
+    height: 5vh;
+    width: 20vh;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+    margin-left: 37%;
+}
+
+textarea{
+    font-family: "Oswald", sans-serif;
+    background-color: #322C2B;
+    border-width: 0 0 thin 0;
+    border-color: #E4C59E;
+    color: white;
+    font-size: 2vh;
+    outline: none;
+}
+
+.title{
+    font-size: 7vh;
+}
+
+.translucent{
+    opacity: 60%;
+}

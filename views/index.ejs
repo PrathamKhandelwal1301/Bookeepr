@@ -1,0 +1,56 @@
+<%- include ("partials/header.ejs") %>
+    <div class="heading-container">
+    <h1 class = "heading h1">Pratham Khandelwal</h1>
+    <h3 class = "heading h3">And the books I've read</h3>
+    <h4 class = "heading h4">This list comprises of the books that I have read in my life my thoughts on the book along with my notes and understanding of the book. 
+        You can see it as a quick summary of the book from my perspective along with my notes it also contains the amazon link for the book. <br> <br>
+        You can also order the book based on <a href="/?sort=1" class="link">Titles</a>, <a href="/?sort=2" class="link">Newest</a>, <a href="/?sort=3" class="link">Score</a> <br> <br>
+        The list will keep updating as I read more, so make sure to check back again in a few months or so.</h4>
+    <a class = "add" href="/add-book"> + </a>
+    </div>
+    <hr>
+    <% if (locals.books) { %>
+        <% books.forEach((book) => { %>
+            <div class = "books">
+                <img class = "loader" src="https://covers.openlibrary.org/b/isbn/<%= book.olid %>-M.jpg" alt="book cover">
+                <h1 class = "book title"><%= book.title %></h1>
+                <h5 class = "book ligther date">DATE READ : <%= book.rdate %>. HOW STRONGLY I RECOMMEND IT : <%= book.score %>/10 </h4>
+                <h3 class="book ligther dscp"><%= book.dscp %></h4>
+                <h4 class = "book ligther">you can also read my <a class = "link" href="/book-notes?id=<%= book.olid %>">notes</a> on the book or buy it from <a class = "link" href="<%= book.link %>">amazon</a></h4>
+                <hr>
+            </div>
+        <% }); %>
+    <% } %>
+
+    <% if(locals.error) {%>
+        <script>
+                alert("<%= error %>");
+        </script>
+    <% } %>
+
+    <script>
+        
+        var reveals = document.querySelectorAll(".books");
+        setTimeout(() => {
+            reveals[0].classList.add('active');
+        },100);
+        setTimeout(() => {
+            reveals[1].classList.add('active');
+        },400);
+        window.addEventListener("scroll",function(){
+            var count = 0;
+            reveals.forEach((reveal) => {
+                    var windowheigth = window.innerHeight;
+                    var revealtop = reveal.getBoundingClientRect().top;
+                    var revealheight = 150;
+                    if(revealtop < windowheigth - revealheight){
+                        reveal.classList.add('active');
+                    }
+
+                    else{
+                        reveal.classList.remove('active');
+                    }
+            });
+        });
+    </script>
+<%- include ("partials/footer.ejs") %>

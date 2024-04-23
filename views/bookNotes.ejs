@@ -1,0 +1,17 @@
+<%- include ("partials/header.ejs") %>
+<div class = "container">
+    <img class = "notes-img"src="https://covers.openlibrary.org/b/isbn/<%= book[0].olid %>-M.jpg" alt="book cover">
+    <h1 class = "book title"><%= book[0].title %></h1>
+    <h5 class = "book date notes ">ISBN : <%= book[0].olid %> <br> Read Date : <%= book[0].rdate %> <br> How Strongly I Recommend it : <%= book[0].score %>/10</h6>
+    <h2 class = "book dscp ligther notes"><%= book[0].dscp %></h2>
+</div>
+<div class="container">
+    <hr class = "notes-hr">
+    <h1 class = "book">My Notes</h1>
+    <h5 class = "book notes note ligther" style="white-space: pre-line;"><%= book[0].notes %></h5>
+</div>
+<div class="butcont">
+      <a href="/delete?olid=<%= book[0].olid %>" class="button"> Delete </a>
+      <a href="/update?olid=<%= book[0].olid %>" class="button"> Update </a>         
+</div>
+<%- include ("partials/footer.ejs") %>  

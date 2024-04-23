@@ -1,0 +1,41 @@
+<%- include ("partials/header.ejs") %>
+<% if (locals.book) { %>
+<% console.log(book) %>
+<div class="cont">
+    <h1 class="heading h1 middle">Edit Book</h1> <br>
+
+    <form action="/update-book" method="post">
+
+        <label class = "translucent" for="title">Title :</label>
+        <input class = "translucent" type="text" name="title" id="title" value = "<%= book[0].title %>" readonly autofocus><br>
+
+        <label for="dscp"> Description :</label>
+        <textarea class = "long-field" name="dscp" id="dscp" cols="45" rows="10" maxlength="500" required><%= book[0].dscp %></textarea><br>
+
+        <label class = "translucent" for="olid"> ISBN : </label>
+        <input class = "translucent" type="text" name="olid" id="olid" value = <%= book[0].olid %> required readonly><br>
+
+        <label for="rdate"> Read Date :</label>
+        <input type="date" name="rdate" id="rdate" required><br>
+
+        <label for="score"> Score (Out of 10) : </label>
+        <input type="text" name="score" id="score" value = '<%= book[0].score %>' required><br>
+
+        <label for="link"> Amazon Link : </label>
+        <input type="text" name="link" id="link" value = '<%= book[0].link %>' required><br>
+
+        <label for="notes"> Notes : </label>
+        <textarea class = "long-field" name="notes" id="notes" cols="45" rows="10" maxlength="5000" required><%= book[0].notes %></textarea><br>
+
+        <input class = "submit" type="submit" name="submit">
+    </form>
+</div>
+
+<% } %>
+
+<% if(locals.error) {%>
+<script>
+        alert("<%= error %>");
+</script>
+<% } %>
+<%- include ("partials/footer.ejs") %>
